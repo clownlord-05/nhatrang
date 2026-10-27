@@ -1,0 +1,103 @@
+/* =====================================================
+   HUY CNC NHA TRANG — Design Tokens
+   Bright Modern Industrial Engineering System v5.0
+   Clean, Authoritative, High-Contrast Light Theme
+   ===================================================== */
+
+:root {
+  /* ── BACKGROUNDS (Pure White & Bright Engineering Slate) ── */
+  --nt-bg-deep:     #FFFFFF; /* Main Page Canvas: Crisp White */
+  --nt-bg-dark:     #F8FAFC; /* Subtle Off-White Section Contrast */
+  --nt-bg-mid:      #F1F5F9; /* Light Slate Neutral for Panels/Tags */
+  --nt-bg-surface:  #E2E8F0; /* Clean Border & Divider Lines */
+  --nt-bg-card:     #FFFFFF; /* Pure White Elevated Cards */
+  --nt-bg-glass:    rgba(255, 255, 255, 0.95); /* Frosted Glass */
+
+  /* ── BRAND COLOURS (Industrial Flame Orange & Maritime Blue) ─ */
+  --nt-coral:       #EA580C; /* Vibrant Precision Flame Orange */
+  --nt-coral-lite:  #F97316;
+  --nt-coral-dark:  #C2410C;
+  --nt-coral-dim:   rgba(234, 88, 12, 0.08);
+
+  --nt-teal:        #0284C7; /* Maritime Marine Steel Blue */
+  --nt-teal-lite:   #0369A1;
+  --nt-teal-dark:   #075985;
+  --nt-teal-dim:    rgba(2, 132, 199, 0.08);
+
+  --nt-navy:        #0F172A; /* Slate 900 Deep Anchoring Blue */
+  --nt-navy-card:   #1E293B;
+
+  --nt-gold:        #D97706; /* Amber Warning/Accent */
+  --nt-gold-dim:    rgba(217, 119, 6, 0.08);
+
+  --nt-steel:       #475569; /* Slate 600 Steel */
+  --nt-steel-dim:   rgba(71, 85, 105, 0.08);
+
+  /* ── TEXT & READABILITY (High Contrast & Deep Crispness) ── */
+  --nt-text:        #090D16; /* Deep Solid Slate 950 — Maximum sharpness */
+  --nt-text-dim:    #1E293B; /* Slate 800 — Rich, crisp body text */
+  --nt-text-muted:  #334155; /* Slate 700 — Clear, never washed-out or blurry */
+  --nt-text-faint:  #64748B; /* Slate 500 — Legible secondary markers */
+
+  /* ── BORDERS & ELEVATION (Crisp, Elegant Light Shadows) ── */
+  --nt-bdr:         #E2E8F0; /* Slate 200 Hairline Border */
+  --nt-bdr-subtle:  #F1F5F9; /* Slate 100 Ultra Subtle */
+  --nt-bdr-active:  #EA580C; /* Flame Orange Active State */
+  --nt-shadow:      0 12px 28px -6px rgba(15, 23, 42, 0.08), 0 4px 12px -2px rgba(15, 23, 42, 0.04);
+  --nt-shadow-card: 0 4px 16px -2px rgba(15, 23, 42, 0.06), 0 2px 6px -1px rgba(15, 23, 42, 0.03);
+  --nt-shadow-hover: 0 16px 36px -4px rgba(15, 23, 42, 0.10), 0 6px 14px -2px rgba(15, 23, 42, 0.05);
+  --nt-glow-coral:  0 4px 16px rgba(234, 88, 12, 0.25);
+  --nt-glow-teal:   0 4px 16px rgba(2, 132, 199, 0.20);
+
+  /* ── TYPOGRAPHY ────────────────────────────────── */
+  --nt-font-body:   'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --nt-font-head:   'Exo 2', sans-serif;
+  --nt-font-mono:   'JetBrains Mono', monospace;
+
+  /* ── SCALE ─────────────────────────────────────── */
+  --nt-max-w:       1280px;
+  --nt-header-h:    76px;
+  --nt-radius-sm:   6px;
+  --nt-radius:      10px;
+  --nt-radius-lg:   16px;
+  --nt-radius-pill: 999px;
+
+  /* ── TRANSITIONS ───────────────────────────────── */
+  --nt-ease:        cubic-bezier(0.16, 1, 0.3, 1);
+  --nt-ease-out:    cubic-bezier(0, 0, 0.2, 1);
+  --nt-dur:         0.22s;
+  --nt-dur-slow:    0.35s;
+
+  /* ── Z-INDEX ────────────────────────────────────── */
+  --z-below:    -1;
+  --z-base:      0;
+  --z-overlay:   100;
+  --z-header:    1000;
+  --z-modal:     2000;
+  --z-toast:     3000;
+}
+
+/* ── LIGHT INDUSTRIAL BASE ──────────────────────── */
+html {
+  color-scheme: light;
+  background: var(--nt-bg-deep);
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+/* ── SOLID & CLEAN INDUSTRIAL GRADIENTS ─────────── */
+.grad-coral   { background: linear-gradient(135deg, var(--nt-coral), var(--nt-coral-dark)); }
+.grad-teal    { background: linear-gradient(135deg, var(--nt-teal), var(--nt-teal-dark)); }
+.grad-hero    { background: linear-gradient(180deg, #F8FAFC 0%, #FFFFFF 100%); }
+.grad-text-coral {
+  background: linear-gradient(135deg, #EA580C, #D97706);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.grad-text-teal {
+  background: linear-gradient(135deg, #0284C7, #0F172A);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}

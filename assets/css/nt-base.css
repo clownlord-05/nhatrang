@@ -1,0 +1,226 @@
+/* =====================================================
+   HUY CNC NHA TRANG — Base & Typography
+   ===================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;600;700;800;900&family=Nunito:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--nt-font-body);
+  font-size: 1.05rem;
+  font-weight: 500;
+  background-color: var(--nt-bg-deep);
+  background-image: 
+    radial-gradient(circle at 50% 0%, rgba(234, 88, 12, 0.03) 0%, transparent 60%),
+    linear-gradient(rgba(15, 23, 42, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(15, 23, 42, 0.025) 1px, transparent 1px);
+  background-size: 100% 100%, 48px 48px, 48px 48px;
+  background-attachment: fixed;
+  color: var(--nt-text);
+  line-height: 1.7;
+  min-height: 100vh;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+p {
+  font-size: 1.05rem;
+  font-weight: 550;
+  color: var(--nt-text-dim);
+  line-height: 1.7;
+}
+
+/* Global legibility boost: ensure all descriptions and card copy are medium-bold and clear */
+.section p, .card p, .panel p, .content p, .ind-card-body p, .showroom-card-desc {
+  font-size: 1.02rem;
+  font-weight: 550;
+  color: var(--nt-text-dim);
+  line-height: 1.7;
+}
+
+/* Elevate legacy small inline styles across all pages */
+[style*="font-size:.8"], [style*="font-size: .8"], [style*="font-size:0.8"], [style*="font-size: 0.8"] {
+  font-size: 0.96rem !important;
+  font-weight: 550 !important;
+  line-height: 1.62 !important;
+}
+
+[style*="font-size:.7"], [style*="font-size: .7"], [style*="font-size:0.7"], [style*="font-size: 0.7"] {
+  font-size: 0.86rem !important;
+  font-weight: 600 !important;
+}
+
+[style*="font-size:.85rem"], [style*="font-size: .85rem"], [style*="font-size:0.85rem"], [style*="font-size: 0.85rem"],
+[style*="font-size:.88rem"], [style*="font-size: .88rem"], [style*="font-size:0.88rem"], [style*="font-size: 0.88rem"],
+[style*="font-size:.82rem"], [style*="font-size: .82rem"], [style*="font-size:0.82rem"], [style*="font-size: 0.82rem"] {
+  font-size: 1rem !important;
+  font-weight: 550 !important;
+  line-height: 1.65 !important;
+}
+
+[style*="color:var(--nt-text-muted)"] {
+  color: var(--nt-text-dim) !important;
+}
+
+a { color: inherit; text-decoration: none; }
+img, video { display: block; max-width: 100%; height: auto; }
+ul, ol { list-style: none; }
+button { cursor: pointer; font-family: inherit; }
+input, textarea, select { font-family: inherit; font-size: 1rem; color: var(--nt-text); }
+
+/* ── HEADINGS ───────────────────────────────────── */
+h1,h2,h3,h4,h5,h6 {
+  font-family: var(--nt-font-head);
+  font-weight: 800;
+  line-height: 1.2;
+  color: var(--nt-text);
+  letter-spacing: -0.01em;
+}
+h1 { font-size: clamp(2.2rem, 5vw, 3.8rem); }
+h2 { font-size: clamp(1.75rem, 3.5vw, 2.6rem); }
+h3 { font-size: clamp(1.25rem, 2.5vw, 1.75rem); }
+h4 { font-size: clamp(1.05rem, 2vw, 1.35rem); }
+
+/* ── MONO ───────────────────────────────────────── */
+.mono { font-family: var(--nt-font-mono); letter-spacing: .04em; }
+
+/* ── BADGE / CHIP ───────────────────────────────── */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+  padding: .3rem .8rem;
+  border-radius: var(--nt-radius-pill);
+  font-size: .74rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  background: var(--nt-bg-mid);
+  border: 1px solid var(--nt-bdr);
+  color: var(--nt-teal);
+}
+.badge-coral {
+  background: var(--nt-coral-dim);
+  border-color: rgba(234, 88, 12, 0.25);
+  color: var(--nt-coral);
+}
+
+/* ── SECTION STRUCTURE ──────────────────────────── */
+.section {
+  padding: clamp(3.5rem, 7vw, 6rem) clamp(1rem, 4vw, 2rem);
+}
+.section-inner {
+  width: min(100%, var(--nt-max-w));
+  margin-inline: auto;
+}
+.section-label {
+  display: inline-block;
+  font-family: var(--nt-font-mono);
+  font-size: .7rem;
+  font-weight: 500;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  color: var(--nt-teal);
+  margin-bottom: .75rem;
+}
+.section-title {
+  font-family: var(--nt-font-head);
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+.section-lead {
+  color: var(--nt-text-dim);
+  font-size: 1.05rem;
+  max-width: 640px;
+  line-height: 1.75;
+}
+.section-header { margin-bottom: 3rem; }
+.section-header.centered { text-align: center; }
+.section-header.centered .section-lead,
+.section-lead.centered,
+[style*="text-align:center"] .section-lead,
+[style*="text-align: center"] .section-lead {
+  margin-inline: auto;
+}
+
+/* ── DIVIDER ────────────────────────────────────── */
+.divider {
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--nt-coral), var(--nt-teal));
+  border-radius: 99px;
+  margin: 1rem 0 1.5rem;
+}
+.divider.centered { margin-inline: auto; }
+
+/* ── SCROLLBAR ──────────────────────────────────── */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #F8FAFC; }
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 99px;
+}
+::-webkit-scrollbar-thumb:hover { background: #94A3B8; }
+
+/* ── FOCUS VISIBLE ──────────────────────────────── */
+:focus-visible {
+  outline: 2px solid var(--nt-teal);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ── SELECTION ──────────────────────────────────── */
+::selection {
+  background: var(--nt-coral-dim);
+  color: var(--nt-text);
+}
+
+/* ── UTILITY ────────────────────────────────────── */
+.sr-only {
+  position: absolute; width: 1px; height: 1px;
+  overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap;
+}
+.text-coral  { color: var(--nt-coral); }
+.text-teal   { color: var(--nt-teal); }
+.text-muted  { color: var(--nt-text-muted); }
+.text-dim    { color: var(--nt-text-dim); }
+.fw-800      { font-weight: 800; }
+.fw-700      { font-weight: 700; }
+
+/* ── PAGE TRANSITION ────────────────────────────── */
+.page-enter { animation: fadeInUp .45s var(--nt-ease-out) both; }
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── SKELETON LOADER ────────────────────────────── */
+.skeleton {
+  background: linear-gradient(90deg,
+    #F1F5F9 25%,
+    #E2E8F0 50%,
+    #F1F5F9 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.4s infinite;
+  border-radius: var(--nt-radius-sm);
+}
+@keyframes shimmer {
+  from { background-position: 200% 0; }
+  to   { background-position: -200% 0; }
+}

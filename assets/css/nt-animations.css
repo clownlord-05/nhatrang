@@ -1,0 +1,142 @@
+/* =====================================================
+   HUY CNC NHA TRANG — Precision Animations & Micro-Interactions v2.0
+   Industrial Motion Design by Agency UI Designer
+   ===================================================== */
+
+/* ── SCROLL REVEAL ──────────────────────────────── */
+[data-reveal] {
+  opacity: 0;
+  transition: opacity .65s var(--nt-ease-out), transform .65s var(--nt-ease-out);
+  will-change: opacity, transform;
+}
+[data-reveal="up"]    { transform: translateY(28px); }
+[data-reveal="left"]  { transform: translateX(-28px); }
+[data-reveal="right"] { transform: translateX(28px); }
+[data-reveal="scale"] { transform: scale(.94); }
+[data-reveal].revealed { opacity: 1; transform: none; }
+
+/* Stagger delays */
+[data-delay="100"] { transition-delay: .1s; }
+[data-delay="200"] { transition-delay: .2s; }
+[data-delay="300"] { transition-delay: .3s; }
+[data-delay="400"] { transition-delay: .4s; }
+[data-delay="500"] { transition-delay: .5s; }
+[data-delay="600"] { transition-delay: .6s; }
+
+/* ── REDUCED MOTION ACCESSIBILITY ───────────────── */
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal], .page-enter, .marquee-track, .laser-pulse {
+    animation: none !important;
+    transition: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* ── PARTNER / CLIENT MARQUEE SCROLL ────────────── */
+.marquee-container {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  display: flex;
+  mask-image: linear-gradient(90deg, transparent 0%, #000 12%, #000 88%, transparent 100%);
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 12%, #000 88%, transparent 100%);
+}
+
+.marquee-track {
+  display: flex;
+  align-items: center;
+  gap: 3.5rem;
+  width: max-content;
+  animation: ticker-slide 28s linear infinite;
+  will-change: transform;
+}
+
+.marquee-container:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+@keyframes ticker-slide {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* ── LASER EMBER & PULSE INDICATOR ──────────────── */
+.laser-pulse {
+  position: relative;
+}
+.laser-pulse::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  box-shadow: 0 0 16px rgba(249, 115, 22, 0.4);
+  animation: pulse-ember 2.2s infinite ease-in-out;
+  pointer-events: none;
+}
+
+@keyframes pulse-ember {
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50%      { opacity: 0.8; transform: scale(1.02); }
+}
+
+/* ── METALLIC SHEEN HOVER EFFECT ────────────────── */
+.metallic-sheen {
+  position: relative;
+  overflow: hidden;
+}
+.metallic-sheen::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.08) 50%,
+    transparent 100%
+  );
+  transform: skewX(-20deg);
+  transition: none;
+  pointer-events: none;
+  z-index: 2;
+}
+.metallic-sheen:hover::before {
+  animation: sheen-sweep 0.75s ease forwards;
+}
+
+@keyframes sheen-sweep {
+  0%   { left: -120%; }
+  100% { left: 200%; }
+}
+
+/* ── HARDWARE TAB FADE TRANSITION ───────────────── */
+.tech-tab-pane {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s var(--nt-ease);
+}
+.tech-tab-pane.active {
+  display: block;
+  opacity: 1;
+  animation: tab-fade-in 0.35s ease forwards;
+}
+
+@keyframes tab-fade-in {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── SPINNER ────────────────────────────────────── */
+.spinner {
+  width: 32px;
+  height: 32px;
+  border: 3px solid var(--nt-bg-surface);
+  border-top-color: var(--nt-coral);
+  border-radius: 50%;
+  animation: spin .6s linear infinite;
+  margin-inline: auto;
+}
+@keyframes spin { to { transform: rotate(360deg); } }

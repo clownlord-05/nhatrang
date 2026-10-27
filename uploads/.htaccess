@@ -1,0 +1,28 @@
+# Huy CNC Nha Trang - Hardened Uploads Directory
+# Disable script execution completely to prevent web shells and remote code execution
+
+# 1. Disable PHP execution
+<IfModule mod_php.c>
+    php_flag engine off
+</IfModule>
+<IfModule mod_php7.c>
+    php_flag engine off
+</IfModule>
+<IfModule mod_php8.c>
+    php_flag engine off
+</IfModule>
+
+# 2. Remove all executable handlers
+RemoveHandler .php .phtml .php3 .php4 .php5 .php7 .php8 .phar .pht .shtml .shtm .cgi .pl .py .rb .asp .aspx .jsp .exe .sh .bat .cmd
+RemoveType .php .phtml .php3 .php4 .php5 .php7 .php8 .phar .pht .shtml .shtm .cgi .pl .py .rb .asp .aspx .jsp .exe .sh .bat .cmd
+
+# 3. Force all files to be treated as default files, never executable
+SetHandler default-handler
+
+# 4. Deny access to any executable script extensions outright
+<FilesMatch "(?i)\.(php|phtml|php3|php4|php5|php7|php8|phar|pht|shtml|shtm|cgi|pl|py|rb|asp|aspx|jsp|exe|sh|bat|cmd|dll)$">
+    Require all denied
+</FilesMatch>
+
+# 5. Disable script options & directory listing
+Options -ExecCGI -Indexes

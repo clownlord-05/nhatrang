@@ -1,0 +1,55 @@
+# Huy CNC Nha Trang - Apache Server Configuration
+
+Options -Indexes +FollowSymLinks
+
+# Security Headers
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-XSS-Protection "1; mode=block"
+    Header set X-Frame-Options "SAMEORIGIN"
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
+    Header set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+</IfModule>
+
+# Protect sensitive files, VCS, configs, and backups
+<FilesMatch "(?i)(^\.|\.(sql|env|bak|log|ini|sh|bat|cmd|md|lock|ya?ml)|composer\.json|package\.json)$">
+    Require all denied
+</FilesMatch>
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /huycnc_nhatrang/
+
+    # Disable HTTP TRACE / TRACK methods (Cross-Site Tracing protection)
+    RewriteCond %{REQUEST_METHOD} ^(TRACE|TRACK) [NC]
+    RewriteRule .* - [F,L]
+
+    # CVE-2024-4577 and PHP CGI Argument Injection Protection
+    # Blocks query strings starting with or containing options like -d, -s, -n, %ad, allow_url_include, auto_prepend_file
+    RewriteCond %{QUERY_STRING} ^(%2d|-)[^=]*(d|s|u|c|n|b) [NC,OR]
+    RewriteCond %{QUERY_STRING} (auto_prepend_file|auto_append_file|allow_url_include|disable_functions) [NC,OR]
+    RewriteCond %{QUERY_STRING} (%ad|%af) [NC]
+    RewriteRule ^.*$ - [F,L]
+
+    # Block direct access to backend config or sensitive scripts
+    RewriteRule ^backend/config\.php$ - [F,L]
+    RewriteRule ^database\.sql$ - [F,L]
+</IfModule>
+
+# Browser Caching
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresDefault "access plus 1 month"
+    ExpiresByType text/html "access plus 0 seconds"
+    ExpiresByType text/css "access plus 1 year"
+    ExpiresByType application/javascript "access plus 1 year"
+    ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType font/woff2 "access plus 1 year"
+</IfModule>
+
+# Gzip Compression
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css application/javascript application/json image/svg+xml
+</IfModule>

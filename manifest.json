@@ -1,0 +1,22 @@
+{
+  "name": "Huy CNC Nha Trang",
+  "short_name": "Huy CNC",
+  "description": "Gia công CNC, cắt laser fiber, biển quảng cáo chuyên nghiệp tại Nha Trang, Khánh Hòa",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#061018",
+  "theme_color": "#FF6B35",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

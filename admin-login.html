@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
+  <title>Đăng Nhập Quản Trị | Huy CNC Nha Trang</title>
+  <meta name="robots" content="noindex, nofollow">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Font Awesome 6 Icons (Local full font + CDN fallback) -->
+  <link rel="stylesheet" href="assets/vendor/fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="assets/css/nt-tokens.css?v=5.1">
+  <link rel="stylesheet" href="assets/css/nt-base.css?v=5.1">
+  <link rel="stylesheet" href="assets/css/nt-components.css?v=5.1">
+  <style>
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: radial-gradient(circle at 50% 30%, #0D2035 0%, var(--nt-bg-deep) 80%);
+      padding: 1.5rem;
+    }
+    .login-card {
+      width: min(100%, 420px);
+      background: var(--nt-bg-card);
+      border: 1px solid var(--nt-bdr);
+      border-radius: var(--nt-radius-lg);
+      padding: 2.5rem 2rem;
+      box-shadow: 0 12px 40px rgba(0,0,0,.6);
+      backdrop-filter: blur(16px);
+    }
+    .login-logo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+    .login-logo img { width: 140px; margin-bottom: .5rem; }
+    .login-title {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--nt-text);
+    }
+    .login-badge {
+      display: inline-block;
+      font-size: .68rem;
+      font-family: var(--nt-font-mono);
+      color: var(--nt-teal);
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      margin-top: .25rem;
+    }
+  </style>
+</head>
+<body>
+
+<div class="login-card">
+  <div class="login-logo">
+    <img src="assets/images/logo-small.webp" alt="Huy CNC Nha Trang" onerror="this.style.display='none'">
+    <h1 class="login-title">Hệ Thống Quản Trị</h1>
+    <span class="login-badge">Chi nhánh Nha Trang · Admin Portal</span>
+  </div>
+
+  <div id="login-alert" style="display:none;padding:.75rem 1rem;border-radius:8px;font-size:.85rem;margin-bottom:1.25rem"></div>
+
+  <form id="login-form">
+    <div class="form-group" style="margin-bottom:1.25rem">
+      <label class="form-label" for="login-email">Email / Tên đăng nhập</label>
+      <input type="email" class="form-control" id="login-email" placeholder="admin@huycnc-nhatrang.com" required autocomplete="username">
+    </div>
+
+    <div class="form-group" style="margin-bottom:1.5rem">
+      <label class="form-label" for="login-pass">Mật khẩu</label>
+      <div style="position:relative">
+        <input type="password" class="form-control" id="login-pass" placeholder="••••••••••••" required autocomplete="current-password" style="padding-right:2.5rem">
+        <button type="button" id="toggle-pass" style="position:absolute;right:.75rem;top:50%;transform:translateY(-50%);background:none;border:none;color:var(--nt-text-muted);cursor:pointer;font-size:.9rem" aria-label="Hiện mật khẩu">
+          <i class="fas fa-eye" id="eye-icon"></i>
+        </button>
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary" id="btn-login" style="width:100%;padding:.85rem">
+      <i class="fas fa-sign-in-alt"></i> Đăng Nhập Hệ Thống
+    </button>
+  </form>
+
+  <div style="text-align:center;margin-top:1.75rem;padding-top:1.25rem;border-top:1px solid var(--nt-bdr-subtle)">
+    <a href="index.html" style="font-size:.82rem;color:var(--nt-text-muted);display:inline-flex;align-items:center;gap:.4rem">
+      <i class="fas fa-arrow-left"></i> Quay lại website chính
+    </a>
+  </div>
+</div>
+
+<script>
+// Toggle Password
+document.getElementById('toggle-pass').addEventListener('click', function() {
+  var passInput = document.getElementById('login-pass');
+  var eye = document.getElementById('eye-icon');
+  if (passInput.type === 'password') {
+    passInput.type = 'text';
+    eye.className = 'fas fa-eye-slash';
+  } else {
+    passInput.type = 'password';
+    eye.className = 'fas fa-eye';
+  }
+});
+
+// Login Handler
+document.getElementById('login-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  var btn = document.getElementById('btn-login');
+  var alertBox = document.getElementById('login-alert');
+  var email = document.getElementById('login-email').value.trim();
+  var pass = document.getElementById('login-pass').value;
+
+  btn.disabled = true;
+  btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Đang xác thực...';
+
+  fetch('backend/api/auth.php?action=login', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email: email, password: pass })
+  })
+  .then(function(res) { return res.json(); })
+  .then(function(data) {
+    if (data.success) {
+      alertBox.style.display = 'block';
+      alertBox.style.background = 'var(--nt-teal-dim)';
+      alertBox.style.color = 'var(--nt-teal-lite)';
+      alertBox.style.border = '1px solid var(--nt-teal)';
+      alertBox.innerHTML = '<i class="fas fa-check-circle"></i> Đăng nhập thành công! Đang chuyển hướng...';
+      sessionStorage.setItem('nt_admin_logged', '1');
+      sessionStorage.setItem('nt_admin_name', data.user ? data.user.fullname : 'Admin');
+      setTimeout(function() { window.location.href = 'admin.html'; }, 800);
+    } else {
+      btn.disabled = false;
+      btn.innerHTML = '<i class="fas fa-sign-in-alt"></i> Đăng Nhập Hệ Thống';
+      alertBox.style.display = 'block';
+      alertBox.style.background = 'var(--nt-coral-dim)';
+      alertBox.style.color = 'var(--nt-coral-lite)';
+      alertBox.style.border = '1px solid var(--nt-coral)';
+      alertBox.innerHTML = '<i class="fas fa-exclamation-triangle"></i> ' + (data.message || 'Email hoặc mật khẩu không chính xác!');
+    }
+  })
+  .catch(function(err) {
+    btn.disabled = false;
+    btn.innerHTML = '<i class="fas fa-sign-in-alt"></i> Đăng Nhập Hệ Thống';
+    alertBox.style.display = 'block';
+    alertBox.style.background = 'var(--nt-coral-dim)';
+    alertBox.style.color = 'var(--nt-coral-lite)';
+    alertBox.style.border = '1px solid var(--nt-coral)';
+    alertBox.innerHTML = '<i class="fas fa-exclamation-triangle"></i> Không thể kết nối đến máy chủ xác thực. Vui lòng thử lại sau.';
+  });
+});
+</script>
+</body>
+</html>
