@@ -739,6 +739,15 @@ select.form-control option { background: var(--nt-bg-surface); }
   background: #0068ff !important;
   border: none !important;
   box-shadow: 0 4px 12px rgba(0, 104, 255, 0.45);
+  padding: 0 !important;
+  overflow: hidden !important;
+}
+.f-ws-zalo img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: 50%;
+  object-fit: cover;
 }
 .f-ws-zalo:hover {
   box-shadow: 0 6px 18px rgba(0, 104, 255, 0.7);
@@ -870,7 +879,8 @@ select.form-control option { background: var(--nt-bg-surface); }
   border: none;
 }
 .float-btn:hover { transform: scale(1.12); }
-.float-zalo  { background: #0068FF; color: #fff; }
+.float-zalo  { background: #0068FF; color: #fff; padding: 0; overflow: hidden; box-shadow: 0 4px 16px rgba(0, 104, 255, 0.45); }
+.float-zalo img { width: 100%; height: 100%; display: block; border-radius: 50%; object-fit: cover; }
 .float-phone { background: var(--nt-coral); color: #fff; animation: ring 2s infinite; }
 .float-top   { background: var(--nt-bg-surface); border: 1px solid var(--nt-bdr); color: var(--nt-text-muted); opacity: 0; pointer-events: none; transition: opacity var(--nt-dur); }
 .float-top.show { opacity: 1; pointer-events: auto; }
