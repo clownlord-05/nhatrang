@@ -356,16 +356,18 @@
 }
 .mat-name {
   color: var(--nt-text);
-  font-size: 1rem;
+  font-size: 1.05rem;
   font-weight: 700;
   display: block;
   line-height: 1.35;
 }
 .mat-spec {
-  font-size: .75rem;
-  font-family: var(--nt-font-mono);
+  font-size: .88rem;
+  font-family: var(--nt-font-body);
+  font-weight: 600;
   display: block;
-  margin-top: .2rem;
+  margin-top: .25rem;
+  letter-spacing: .02em;
 }
 .badge-mobile-cost,
 .cell-label-mobile {
@@ -374,46 +376,50 @@
 .rating-bar-wrap {
   display: flex;
   align-items: center;
-  gap: .65rem;
+  gap: .75rem;
 }
 .rating-score {
-  font-size: .82rem;
+  font-size: 1.05rem;
   font-weight: 800;
-  font-family: var(--nt-font-mono);
-  min-width: 42px;
+  font-family: var(--nt-font-head);
+  letter-spacing: .02em;
+  min-width: 48px;
 }
 .rating-score.teal { color: var(--nt-teal); }
 .rating-score.gold { color: var(--nt-gold); }
 .rating-bar {
   flex: 1;
-  height: 6px;
-  background: var(--nt-bg-surface);
+  height: 8px;
+  background: var(--nt-bg-mid);
   border-radius: 99px;
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--nt-bg-surface);
 }
 .rating-fill {
   height: 100%;
   border-radius: 99px;
-  background: linear-gradient(90deg, var(--nt-teal), #7FF6FF);
+  background: linear-gradient(90deg, var(--nt-teal), #38BDF8);
 }
 .rating-fill.coral {
   background: linear-gradient(90deg, var(--nt-coral), var(--nt-gold));
 }
 .rating-note {
-  font-size: .75rem;
-  color: var(--nt-text-muted);
+  font-size: .85rem;
+  font-weight: 500;
+  color: var(--nt-text-dim);
   display: block;
   margin-top: .35rem;
-  line-height: 1.45;
+  line-height: 1.5;
 }
 .strength-val {
-  font-size: .95rem;
-  font-weight: 700;
+  font-size: 1.05rem;
+  font-weight: 800;
+  font-family: var(--nt-font-head);
   color: var(--nt-text);
 }
 .strength-desc {
-  font-size: .72rem;
+  font-size: .82rem;
+  font-weight: 500;
   color: var(--nt-text-muted);
   display: block;
   margin-top: .15rem;
