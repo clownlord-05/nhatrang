@@ -1,11 +1,11 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
-  <title>Báº£ng Äiá»u Khiá»ƒn Quáº£n Trá»‹ | Huy CNC Nha Trang</title>
+  <title>Bảng Điều Khiển Quản Trị | Huy CNC Nha Trang</title>
   <meta name="robots" content="noindex, nofollow">
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,48 +21,48 @@
 </head>
 <body class="admin-body">
 
-<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• SIDEBAR â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+<!-- ═══════════════════════ SIDEBAR ═══════════════════════ -->
 <aside class="admin-sidebar" id="admin-sidebar">
   <div class="admin-brand">
     <a href="index.html" target="_blank" title="Xem website">
       <img src="assets/images/logo-small.webp" alt="Huy CNC Nha Trang" onerror="this.src='apple-touch-icon.png'">
     </a>
-    <div class="admin-brand-sub">Chi NhÃ¡nh Nha Trang Â· v1.0</div>
+    <div class="admin-brand-sub">Chi Nhánh Nha Trang · v1.0</div>
   </div>
 
   <div class="admin-nav-section">
-    <div class="admin-nav-label">Quáº£n lÃ½ chÃ­nh</div>
+    <div class="admin-nav-label">Quản lý chính</div>
     <button type="button" class="admin-nav-link active" data-tab="dashboard">
-      <i class="fas fa-chart-line"></i> Tá»•ng Quan
+      <i class="fas fa-chart-line"></i> Tổng Quan
     </button>
     <button type="button" class="admin-nav-link" data-tab="quotes">
-      <i class="fas fa-file-invoice-dollar"></i> YÃªu Cáº§u BÃ¡o GiÃ¡
+      <i class="fas fa-file-invoice-dollar"></i> Yêu Cầu Báo Giá
       <span class="admin-nav-badge" id="badge-quotes-count">3</span>
     </button>
     <button type="button" class="admin-nav-link" data-tab="products">
-      <i class="fas fa-box-open"></i> Quáº£n LÃ½ Sáº£n Pháº©m
+      <i class="fas fa-box-open"></i> Quản Lý Sản Phẩm
     </button>
     <button type="button" class="admin-nav-link" data-tab="contacts">
-      <i class="fas fa-envelope"></i> Tin Nháº¯n LiÃªn Há»‡
+      <i class="fas fa-envelope"></i> Tin Nhắn Liên Hệ
       <span class="admin-nav-badge" id="badge-contacts-count" style="background:var(--nt-teal);color:#000">2</span>
     </button>
     <button type="button" class="admin-nav-link" data-tab="blog">
-      <i class="fas fa-newspaper"></i> BÃ i Viáº¿t &amp; Blog
+      <i class="fas fa-newspaper"></i> Bài Viết &amp; Blog
     </button>
   </div>
 
   <div class="admin-nav-section" style="margin-top:auto">
-    <div class="admin-nav-label">Há»‡ thá»‘ng</div>
+    <div class="admin-nav-label">Hệ thống</div>
     <a href="index.html" target="_blank" class="admin-nav-link">
-      <i class="fas fa-external-link-alt"></i> Xem Trang Chá»§
+      <i class="fas fa-external-link-alt"></i> Xem Trang Chủ
     </a>
     <button type="button" class="admin-nav-link" id="btn-logout" style="color:var(--nt-coral)">
-      <i class="fas fa-sign-out-alt"></i> ÄÄƒng Xuáº¥t
+      <i class="fas fa-sign-out-alt"></i> Đăng Xuất
     </button>
   </div>
 </aside>
 
-<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• MAIN CONTENT â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+<!-- ═══════════════════════ MAIN CONTENT ═══════════════════════ -->
 <div class="admin-main">
   
   <!-- TOPBAR -->
@@ -71,12 +71,12 @@
       <button type="button" class="nt-hamburger" id="admin-menu-toggle" style="display:flex;background:none;border:none;color:#fff;cursor:pointer">
         <i class="fas fa-bars" style="font-size:1.2rem"></i>
       </button>
-      <h2 class="admin-topbar-title" id="page-section-title">Tá»•ng Quan Hoáº¡t Äá»™ng</h2>
+      <h2 class="admin-topbar-title" id="page-section-title">Tổng Quan Hoạt Động</h2>
     </div>
 
     <div class="admin-topbar-actions">
       <button type="button" class="btn btn-primary btn-sm" id="top-btn-add-prod" style="display:none">
-        <i class="fas fa-plus"></i> ThÃªm Sáº£n Pháº©m
+        <i class="fas fa-plus"></i> Thêm Sản Phẩm
       </button>
       <div style="display:flex;align-items:center;gap:.6rem">
         <div class="admin-user-avatar" id="admin-user-initial">A</div>
@@ -88,7 +88,7 @@
   <!-- CONTENT VIEWPORTS -->
   <main class="admin-content">
 
-    <!-- â”€â”€â”€ TAB 1: DASHBOARD â”€â”€â”€ -->
+    <!-- ─── TAB 1: DASHBOARD ─── -->
     <section id="tab-dashboard" class="admin-tab-view">
       
       <!-- STATS KPI -->
@@ -96,7 +96,7 @@
         <div class="admin-stat-card">
           <div>
             <div class="admin-stat-val" id="stat-val-quotes">3</div>
-            <div class="admin-stat-lbl">BÃ¡o GiÃ¡ Má»›i Nháº­n</div>
+            <div class="admin-stat-lbl">Báo Giá Mới Nhận</div>
           </div>
           <div class="admin-stat-icon coral"><i class="fas fa-calculator"></i></div>
         </div>
@@ -104,7 +104,7 @@
         <div class="admin-stat-card">
           <div>
             <div class="admin-stat-val" id="stat-val-contacts">2</div>
-            <div class="admin-stat-lbl">Tin Nháº¯n ChÆ°a Äá»c</div>
+            <div class="admin-stat-lbl">Tin Nhắn Chưa Đọc</div>
           </div>
           <div class="admin-stat-icon gold"><i class="fas fa-comment-dots"></i></div>
         </div>
@@ -112,7 +112,7 @@
         <div class="admin-stat-card">
           <div>
             <div class="admin-stat-val" id="stat-val-products">12</div>
-            <div class="admin-stat-lbl">Sáº£n Pháº©m Äang ÄÄƒng</div>
+            <div class="admin-stat-lbl">Sản Phẩm Đang Đăng</div>
           </div>
           <div class="admin-stat-icon"><i class="fas fa-boxes"></i></div>
         </div>
@@ -120,7 +120,7 @@
         <div class="admin-stat-card">
           <div>
             <div class="admin-stat-val" id="stat-val-articles">6</div>
-            <div class="admin-stat-lbl">BÃ i Viáº¿t Ká»¹ Thuáº­t</div>
+            <div class="admin-stat-lbl">Bài Viết Kỹ Thuật</div>
           </div>
           <div class="admin-stat-icon"><i class="fas fa-file-alt"></i></div>
         </div>
@@ -129,20 +129,20 @@
       <!-- RECENT QUOTES TABLE -->
       <div class="admin-table-wrapper">
         <div class="admin-table-header">
-          <h3 class="admin-table-title"><i class="fas fa-bell" style="color:var(--nt-coral);margin-right:.4rem"></i> YÃªu Cáº§u BÃ¡o GiÃ¡ Má»›i Nháº¥t</h3>
-          <button type="button" class="btn btn-ghost btn-sm" onclick="switchTab('quotes')">Xem Táº¥t Cáº£</button>
+          <h3 class="admin-table-title"><i class="fas fa-bell" style="color:var(--nt-coral);margin-right:.4rem"></i> Yêu Cầu Báo Giá Mới Nhất</h3>
+          <button type="button" class="btn btn-ghost btn-sm" onclick="switchTab('quotes')">Xem Tất Cả</button>
         </div>
         <div style="overflow-x:auto">
           <table class="admin-table">
             <thead>
               <tr>
-                <th>MÃ£ ÄÆ¡n</th>
-                <th>KhÃ¡ch HÃ ng</th>
-                <th>Äiá»‡n Thoáº¡i</th>
-                <th>Dá»‹ch Vá»¥ &amp; Váº­t Liá»‡u</th>
-                <th>Sá»‘ LÆ°á»£ng</th>
-                <th>Tráº¡ng ThÃ¡i</th>
-                <th>Thao TÃ¡c</th>
+                <th>Mã Đơn</th>
+                <th>Khách Hàng</th>
+                <th>Điện Thoại</th>
+                <th>Dịch Vụ &amp; Vật Liệu</th>
+                <th>Số Lượng</th>
+                <th>Trạng Thái</th>
+                <th>Thao Tác</th>
               </tr>
             </thead>
             <tbody id="dash-quotes-tbody">
@@ -155,18 +155,18 @@
       <!-- RECENT CONTACTS TABLE -->
       <div class="admin-table-wrapper">
         <div class="admin-table-header">
-          <h3 class="admin-table-title"><i class="fas fa-envelope" style="color:var(--nt-teal);margin-right:.4rem"></i> Tin Nháº¯n KhÃ¡ch HÃ ng Gáº§n ÄÃ¢y</h3>
-          <button type="button" class="btn btn-ghost btn-sm" onclick="switchTab('contacts')">Xem Táº¥t Cáº£</button>
+          <h3 class="admin-table-title"><i class="fas fa-envelope" style="color:var(--nt-teal);margin-right:.4rem"></i> Tin Nhắn Khách Hàng Gần Đây</h3>
+          <button type="button" class="btn btn-ghost btn-sm" onclick="switchTab('contacts')">Xem Tất Cả</button>
         </div>
         <div style="overflow-x:auto">
           <table class="admin-table">
             <thead>
               <tr>
-                <th>Há» TÃªn</th>
-                <th>LiÃªn Há»‡</th>
-                <th>Chá»§ Äá»</th>
-                <th>Ná»™i Dung</th>
-                <th>Tráº¡ng ThÃ¡i</th>
+                <th>Họ Tên</th>
+                <th>Liên Hệ</th>
+                <th>Chủ Đề</th>
+                <th>Nội Dung</th>
+                <th>Trạng Thái</th>
               </tr>
             </thead>
             <tbody id="dash-contacts-tbody">
@@ -178,18 +178,18 @@
 
     </section>
 
-    <!-- â”€â”€â”€ TAB 2: QUOTES â”€â”€â”€ -->
+    <!-- ─── TAB 2: QUOTES ─── -->
     <section id="tab-quotes" class="admin-tab-view" style="display:none">
       <div class="admin-table-wrapper">
         <div class="admin-table-header">
-          <h3 class="admin-table-title">Danh SÃ¡ch BÃ¡o GiÃ¡ KhÃ¡ch HÃ ng</h3>
+          <h3 class="admin-table-title">Danh Sách Báo Giá Khách Hàng</h3>
           <div style="display:flex;gap:.5rem">
             <select class="form-control" id="quotes-filter-status" style="width:160px;padding:.4rem .8rem;font-size:.82rem">
-              <option value="all">Táº¥t cáº£ tráº¡ng thÃ¡i</option>
-              <option value="new">Má»›i gá»­i (New)</option>
-              <option value="processing">Äang xá»­ lÃ½</option>
-              <option value="replied">ÄÃ£ pháº£n há»“i</option>
-              <option value="done">HoÃ n táº¥t</option>
+              <option value="all">Tất cả trạng thái</option>
+              <option value="new">Mới gửi (New)</option>
+              <option value="processing">Đang xử lý</option>
+              <option value="replied">Đã phản hồi</option>
+              <option value="done">Hoàn tất</option>
             </select>
           </div>
         </div>
@@ -197,14 +197,14 @@
           <table class="admin-table">
             <thead>
               <tr>
-                <th>MÃ£ ÄÆ¡n</th>
-                <th>KhÃ¡ch HÃ ng</th>
-                <th>Sá»‘ ÄT</th>
-                <th>Váº­t Liá»‡u &amp; KÃ­ch ThÆ°á»›c</th>
-                <th>Sá»‘ LÆ°á»£ng</th>
+                <th>Mã Đơn</th>
+                <th>Khách Hàng</th>
+                <th>Số ĐT</th>
+                <th>Vật Liệu &amp; Kích Thước</th>
+                <th>Số Lượng</th>
                 <th>File CAD</th>
-                <th>Tráº¡ng ThÃ¡i</th>
-                <th>Cáº­p Nháº­t</th>
+                <th>Trạng Thái</th>
+                <th>Cập Nhật</th>
               </tr>
             </thead>
             <tbody id="all-quotes-tbody">
@@ -215,26 +215,26 @@
       </div>
     </section>
 
-    <!-- â”€â”€â”€ TAB 3: PRODUCTS â”€â”€â”€ -->
+    <!-- ─── TAB 3: PRODUCTS ─── -->
     <section id="tab-products" class="admin-tab-view" style="display:none">
       <div class="admin-table-wrapper">
         <div class="admin-table-header">
-          <h3 class="admin-table-title">Quáº£n LÃ½ Sáº£n Pháº©m Catalogue</h3>
+          <h3 class="admin-table-title">Quản Lý Sản Phẩm Catalogue</h3>
           <button type="button" class="btn btn-primary btn-sm" id="btn-open-add-product">
-            <i class="fas fa-plus"></i> ThÃªm Sáº£n Pháº©m Má»›i
+            <i class="fas fa-plus"></i> Thêm Sản Phẩm Mới
           </button>
         </div>
         <div style="overflow-x:auto">
           <table class="admin-table">
             <thead>
               <tr>
-                <th>HÃ¬nh áº¢nh</th>
-                <th>TÃªn Sáº£n Pháº©m</th>
-                <th>Danh Má»¥c</th>
-                <th>Váº­t Liá»‡u</th>
-                <th>Äá»™ ChÃ­nh XÃ¡c</th>
-                <th>Tráº¡ng ThÃ¡i</th>
-                <th>Thao TÃ¡c</th>
+                <th>Hình Ảnh</th>
+                <th>Tên Sản Phẩm</th>
+                <th>Danh Mục</th>
+                <th>Vật Liệu</th>
+                <th>Độ Chính Xác</th>
+                <th>Trạng Thái</th>
+                <th>Thao Tác</th>
               </tr>
             </thead>
             <tbody id="all-products-tbody">
@@ -245,23 +245,23 @@
       </div>
     </section>
 
-    <!-- â”€â”€â”€ TAB 4: CONTACTS â”€â”€â”€ -->
+    <!-- ─── TAB 4: CONTACTS ─── -->
     <section id="tab-contacts" class="admin-tab-view" style="display:none">
       <div class="admin-table-wrapper">
         <div class="admin-table-header">
-          <h3 class="admin-table-title">HÃ²m ThÆ° LiÃªn Há»‡ KhÃ¡ch HÃ ng</h3>
+          <h3 class="admin-table-title">Hòm Thư Liên Hệ Khách Hàng</h3>
         </div>
         <div style="overflow-x:auto">
           <table class="admin-table">
             <thead>
               <tr>
-                <th>Thá»i Gian</th>
-                <th>Há» TÃªn</th>
-                <th>Sá»‘ Äiá»‡n Thoáº¡i / Email</th>
-                <th>Chá»§ Äá»</th>
-                <th>Ná»™i Dung Chi Tiáº¿t</th>
-                <th>Tráº¡ng ThÃ¡i</th>
-                <th>Thao TÃ¡c</th>
+                <th>Thời Gian</th>
+                <th>Họ Tên</th>
+                <th>Số Điện Thoại / Email</th>
+                <th>Chủ Đề</th>
+                <th>Nội Dung Chi Tiết</th>
+                <th>Trạng Thái</th>
+                <th>Thao Tác</th>
               </tr>
             </thead>
             <tbody id="all-contacts-tbody">
@@ -272,25 +272,25 @@
       </div>
     </section>
 
-    <!-- â”€â”€â”€ TAB 5: BLOG â”€â”€â”€ -->
+    <!-- ─── TAB 5: BLOG ─── -->
     <section id="tab-blog" class="admin-tab-view" style="display:none">
       <div class="admin-table-wrapper">
         <div class="admin-table-header">
-          <h3 class="admin-table-title">Danh SÃ¡ch BÃ i Viáº¿t Blog &amp; Ká»¹ Thuáº­t</h3>
-          <button type="button" class="btn btn-primary btn-sm" onclick="alert('TÃ­nh nÄƒng soáº¡n tháº£o bÃ i viáº¿t má»›i chuáº©n bá»‹ má»Ÿ!')">
-            <i class="fas fa-pen"></i> Viáº¿t BÃ i Má»›i
+          <h3 class="admin-table-title">Danh Sách Bài Viết Blog &amp; Kỹ Thuật</h3>
+          <button type="button" class="btn btn-primary btn-sm" onclick="alert('Tính năng soạn thảo bài viết mới chuẩn bị mở!')">
+            <i class="fas fa-pen"></i> Viết Bài Mới
           </button>
         </div>
         <div style="overflow-x:auto">
           <table class="admin-table">
             <thead>
               <tr>
-                <th>TiÃªu Äá» BÃ i Viáº¿t</th>
-                <th>ChuyÃªn Má»¥c</th>
-                <th>TÃ¡c Giáº£</th>
-                <th>LÆ°á»£t Xem</th>
-                <th>Tráº¡ng ThÃ¡i</th>
-                <th>Thao TÃ¡c</th>
+                <th>Tiêu Đề Bài Viết</th>
+                <th>Chuyên Mục</th>
+                <th>Tác Giả</th>
+                <th>Lượt Xem</th>
+                <th>Trạng Thái</th>
+                <th>Thao Tác</th>
               </tr>
             </thead>
             <tbody id="all-blog-tbody">
@@ -304,11 +304,11 @@
   </main>
 </div>
 
-<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• MODAL THÃŠM Sáº¢N PHáº¨M â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+<!-- ═══════════════════════ MODAL THÊM SẢN PHẨM ═══════════════════════ -->
 <div class="nt-modal-backdrop" id="modal-product">
   <div class="nt-modal">
     <div class="nt-modal-header">
-      <h3 class="nt-modal-title" id="modal-prod-title">ThÃªm Sáº£n Pháº©m Má»›i</h3>
+      <h3 class="nt-modal-title" id="modal-prod-title">Thêm Sản Phẩm Mới</h3>
       <button type="button" class="nt-modal-close" onclick="closeProdModal()">&times;</button>
     </div>
     <form id="form-product" onsubmit="handleSaveProduct(event)">
@@ -316,68 +316,68 @@
         <input type="hidden" id="prod-id" value="">
 
         <div class="form-group" style="margin-bottom:1rem">
-          <label class="form-label">TÃªn sáº£n pháº©m <span class="req">*</span></label>
-          <input type="text" class="form-control" id="form-prod-name" placeholder="VÃ­ dá»¥: Khung MÃ¡y CNC NhÃ´m 6061" required>
+          <label class="form-label">Tên sản phẩm <span class="req">*</span></label>
+          <input type="text" class="form-control" id="form-prod-name" placeholder="Ví dụ: Khung Máy CNC Nhôm 6061" required>
         </div>
 
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem">
           <div class="form-group">
-            <label class="form-label">Danh má»¥c <span class="req">*</span></label>
+            <label class="form-label">Danh mục <span class="req">*</span></label>
             <select class="form-control" id="form-prod-cat" required>
-              <option value="cnc">Gia CÃ´ng CNC</option>
-              <option value="laser">Cáº¯t Laser Fiber</option>
-              <option value="bienqc">Biá»ƒn Quáº£ng CÃ¡o</option>
-              <option value="mica">Gia CÃ´ng Mica</option>
-              <option value="quatang">QuÃ  Táº·ng DN</option>
+              <option value="cnc">Gia Công CNC</option>
+              <option value="laser">Cắt Laser Fiber</option>
+              <option value="bienqc">Biển Quảng Cáo</option>
+              <option value="mica">Gia Công Mica</option>
+              <option value="quatang">Quà Tặng DN</option>
             </select>
           </div>
           <div class="form-group">
-            <label class="form-label">GiÃ¡ niÃªm yáº¿t (VNÄ)</label>
-            <input type="number" class="form-control" id="form-prod-price" placeholder="0 náº¿u bÃ¡o giÃ¡ riÃªng" value="0">
+            <label class="form-label">Giá niêm yết (VNĐ)</label>
+            <input type="number" class="form-control" id="form-prod-price" placeholder="0 nếu báo giá riêng" value="0">
           </div>
         </div>
 
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem">
           <div class="form-group">
-            <label class="form-label">Váº­t liá»‡u chÃ­nh</label>
-            <input type="text" class="form-control" id="form-prod-material" placeholder="Inox 304 / NhÃ´m / Mica">
+            <label class="form-label">Vật liệu chính</label>
+            <input type="text" class="form-control" id="form-prod-material" placeholder="Inox 304 / Nhôm / Mica">
           </div>
           <div class="form-group">
-            <label class="form-label">Äá»™ chÃ­nh xÃ¡c (dung sai)</label>
-            <input type="text" class="form-control" id="form-prod-precision" placeholder="Â±0.01mm">
+            <label class="form-label">Độ chính xác (dung sai)</label>
+            <input type="text" class="form-control" id="form-prod-precision" placeholder="±0.01mm">
           </div>
         </div>
 
         <div class="form-group" style="margin-bottom:1rem">
-          <label class="form-label">MÃ´ táº£ sáº£n pháº©m</label>
-          <textarea class="form-control" id="form-prod-desc" rows="3" placeholder="Äáº·c Ä‘iá»ƒm, Æ°u Ä‘iá»ƒm vÃ  á»©ng dá»¥ng..."></textarea>
+          <label class="form-label">Mô tả sản phẩm</label>
+          <textarea class="form-control" id="form-prod-desc" rows="3" placeholder="Đặc điểm, ưu điểm và ứng dụng..."></textarea>
         </div>
 
         <div class="form-group">
-          <label class="form-label">ÄÆ°á»ng dáº«n áº£nh Ä‘áº¡i diá»‡n</label>
+          <label class="form-label">Đường dẫn ảnh đại diện</label>
           <input type="text" class="form-control" id="form-prod-img" placeholder="uploads/products/catalogue-sp01-card.webp">
         </div>
       </div>
       <div class="nt-modal-footer">
-        <button type="button" class="btn btn-ghost btn-sm" onclick="closeProdModal()">Há»§y</button>
-        <button type="submit" class="btn btn-primary btn-sm">LÆ°u Sáº£n Pháº©m</button>
+        <button type="button" class="btn btn-ghost btn-sm" onclick="closeProdModal()">Hủy</button>
+        <button type="submit" class="btn btn-primary btn-sm">Lưu Sản Phẩm</button>
       </div>
     </form>
   </div>
 </div>
 
-<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• MODAL CHI TIáº¾T BÃO GIÃ â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+<!-- ═══════════════════════ MODAL CHI TIẾT BÁO GIÁ ═══════════════════════ -->
 <div class="nt-modal-backdrop" id="modal-quote-detail">
   <div class="nt-modal" style="width:min(100%,650px)">
     <div class="nt-modal-header">
-      <h3 class="nt-modal-title">Chi Tiáº¿t YÃªu Cáº§u BÃ¡o GiÃ¡</h3>
+      <h3 class="nt-modal-title">Chi Tiết Yêu Cầu Báo Giá</h3>
       <button type="button" class="nt-modal-close" onclick="document.getElementById('modal-quote-detail').classList.remove('open')">&times;</button>
     </div>
     <div class="nt-modal-body" id="modal-quote-content">
       <!-- Injected via JS -->
     </div>
     <div class="nt-modal-footer">
-      <button type="button" class="btn btn-ghost btn-sm" onclick="document.getElementById('modal-quote-detail').classList.remove('open')">ÄÃ³ng</button>
+      <button type="button" class="btn btn-ghost btn-sm" onclick="document.getElementById('modal-quote-detail').classList.remove('open')">Đóng</button>
     </div>
   </div>
 </div>
@@ -413,29 +413,29 @@
 })();
 // Mock data & API loader
 var quotesData = [
-  { id: 1, quote_code: 'HCNC-NT-2026-0042', customer_name: 'Nguyá»…n VÄƒn Long', customer_phone: '0905123456', service_type: 'laser', material: 'Inox 304', thickness: '2.0', dimensions: '1200 x 2400', quantity: 5, status: 'new', created_at: '2026-10-13 08:15', note: 'Cáº¯t laser vÃ¡ch ngÄƒn máº·t tiá»n biá»‡t thá»±, yÃªu cáº§u khÃ´ng ba via.' },
-  { id: 2, quote_code: 'HCNC-NT-2026-0041', customer_name: 'Tráº§n Thá»‹ Mai', customer_phone: '0988765432', service_type: 'bienqc', material: 'Inox vÃ ng gÆ°Æ¡ng + LED', thickness: '1.2', dimensions: 'Bá»™ chá»¯ cao 60cm', quantity: 1, status: 'processing', created_at: '2026-10-12 16:40', note: 'Biá»ƒn tÃªn khÃ¡ch sáº¡n Ä‘Æ°á»ng Tráº§n PhÃº Nha Trang.' },
-  { id: 3, quote_code: 'HCNC-NT-2026-0040', customer_name: 'HoÃ ng Minh Tuáº¥n', customer_phone: '0912349876', service_type: 'cnc', material: 'NhÃ´m A6061', thickness: '15.0', dimensions: '80 x 120 x 40', quantity: 50, status: 'new', created_at: '2026-10-12 11:20', note: 'Chi tiáº¿t Ä‘á»“ gÃ¡ cÃ´ng nghiá»‡p, cáº§n dung sai Â±0.01mm.' }
+  { id: 1, quote_code: 'HCNC-NT-2026-0042', customer_name: 'Nguyễn Văn Long', customer_phone: '0905123456', service_type: 'laser', material: 'Inox 304', thickness: '2.0', dimensions: '1200 x 2400', quantity: 5, status: 'new', created_at: '2026-10-13 08:15', note: 'Cắt laser vách ngăn mặt tiền biệt thự, yêu cầu không ba via.' },
+  { id: 2, quote_code: 'HCNC-NT-2026-0041', customer_name: 'Trần Thị Mai', customer_phone: '0988765432', service_type: 'bienqc', material: 'Inox vàng gương + LED', thickness: '1.2', dimensions: 'Bộ chữ cao 60cm', quantity: 1, status: 'processing', created_at: '2026-10-12 16:40', note: 'Biển tên khách sạn đường Trần Phú Nha Trang.' },
+  { id: 3, quote_code: 'HCNC-NT-2026-0040', customer_name: 'Hoàng Minh Tuấn', customer_phone: '0912349876', service_type: 'cnc', material: 'Nhôm A6061', thickness: '15.0', dimensions: '80 x 120 x 40', quantity: 50, status: 'new', created_at: '2026-10-12 11:20', note: 'Chi tiết đồ gá công nghiệp, cần dung sai ±0.01mm.' }
 ];
 
 var contactsData = [
-  { id: 1, name: 'LÃª VÄƒn CÆ°á»ng', phone_email: '0933445566', subject: 'TÆ° váº¥n biá»ƒn LED', message: 'TÃ´i cáº§n tÆ° váº¥n biá»ƒn hiá»‡u LED ngoÃ i trá»i cho showroom ná»™i tháº¥t Ä‘Æ°á»ng 23/10.', status: 'unread', created_at: '2026-10-13 07:50' },
-  { id: 2, name: 'Pháº¡m Thu Tháº£o', phone_email: 'thuthao@resort.vn', subject: 'Gia cÃ´ng mica sá»‘ lÆ°á»£ng lá»›n', message: 'BÃªn mÃ¬nh muá»‘n Ä‘áº·t 300 khay Ä‘á»ƒ phÃ²ng khÃ¡ch sáº¡n báº±ng mica uá»‘n.', status: 'unread', created_at: '2026-10-12 14:10' }
+  { id: 1, name: 'Lê Văn Cường', phone_email: '0933445566', subject: 'Tư vấn biển LED', message: 'Tôi cần tư vấn biển hiệu LED ngoài trời cho showroom nội thất đường 23/10.', status: 'unread', created_at: '2026-10-13 07:50' },
+  { id: 2, name: 'Phạm Thu Thảo', phone_email: 'thuthao@resort.vn', subject: 'Gia công mica số lượng lớn', message: 'Bên mình muốn đặt 300 khay để phòng khách sạn bằng mica uốn.', status: 'unread', created_at: '2026-10-12 14:10' }
 ];
 
 var productsData = [
-  { id: 1, name: 'Biá»ƒn Chá»¯ Ná»•i Inox 304 Cao Cáº¥p', category: 'bienqc', material: 'Inox 304', precision_level: 'Â±0.01mm', price: 0, image: 'uploads/products/catalogue-sp01-card.webp', status: 'active' },
-  { id: 2, name: 'Gia CÃ´ng CNC NhÃ´m 6061 ChÃ­nh XÃ¡c', category: 'cnc', material: 'NhÃ´m A6061', precision_level: 'Â±0.005mm', price: 0, image: 'uploads/products/catalogue-sp02-card.webp', status: 'active' },
-  { id: 3, name: 'Cáº¯t Laser Fiber Inox Táº¥m Theo YÃªu Cáº§u', category: 'laser', material: 'Inox táº¥m', precision_level: 'Â±0.02mm', price: 0, image: 'uploads/products/catalogue-sp03-card.webp', status: 'active' },
-  { id: 4, name: 'Ká»‡ Mica TrÆ°ng BÃ y & Menu Äá»ƒ BÃ n', category: 'mica', material: 'Mica ÄÃ i Loan', precision_level: 'Â±0.05mm', price: 0, image: 'uploads/products/catalogue-sp04-card.webp', status: 'active' },
-  { id: 5, name: 'Kháº¯c Laser Logo CÃ´ng Ty & QuÃ  Táº·ng', category: 'quatang', material: 'Kim loáº¡i / Pha lÃª', precision_level: 'Â±0.01mm', price: 0, image: 'uploads/products/catalogue-sp05-card.webp', status: 'active' },
-  { id: 6, name: 'Biá»ƒn Há»™p ÄÃ¨n LED Mica NgoÃ i Trá»i', category: 'bienqc', material: 'Mica & NhÃ´m Ä‘á»‹nh hÃ¬nh', precision_level: 'Â±0.1mm', price: 0, image: 'uploads/products/catalogue-sp06-card.webp', status: 'active' }
+  { id: 1, name: 'Biển Chữ Nổi Inox 304 Cao Cấp', category: 'bienqc', material: 'Inox 304', precision_level: '±0.01mm', price: 0, image: 'uploads/products/catalogue-sp01-card.webp', status: 'active' },
+  { id: 2, name: 'Gia Công CNC Nhôm 6061 Chính Xác', category: 'cnc', material: 'Nhôm A6061', precision_level: '±0.005mm', price: 0, image: 'uploads/products/catalogue-sp02-card.webp', status: 'active' },
+  { id: 3, name: 'Cắt Laser Fiber Inox Tấm Theo Yêu Cầu', category: 'laser', material: 'Inox tấm', precision_level: '±0.02mm', price: 0, image: 'uploads/products/catalogue-sp03-card.webp', status: 'active' },
+  { id: 4, name: 'Kệ Mica Trưng Bày & Menu Để Bàn', category: 'mica', material: 'Mica Đài Loan', precision_level: '±0.05mm', price: 0, image: 'uploads/products/catalogue-sp04-card.webp', status: 'active' },
+  { id: 5, name: 'Khắc Laser Logo Công Ty & Quà Tặng', category: 'quatang', material: 'Kim loại / Pha lê', precision_level: '±0.01mm', price: 0, image: 'uploads/products/catalogue-sp05-card.webp', status: 'active' },
+  { id: 6, name: 'Biển Hộp Đèn LED Mica Ngoài Trời', category: 'bienqc', material: 'Mica & Nhôm định hình', precision_level: '±0.1mm', price: 0, image: 'uploads/products/catalogue-sp06-card.webp', status: 'active' }
 ];
 
 var blogData = [
-  { id: 1, title: 'So SÃ¡nh Inox 304 vÃ  Inox 316 Trong MÃ´i TrÆ°á»ng GiÃ³ Biá»ƒn Nha Trang', category: 'Váº­t Liá»‡u', author: 'Ká»¹ SÆ° TrÆ°á»Ÿng', views: 420, status: 'published' },
-  { id: 2, title: 'Ká»¹ Thuáº­t Cáº¯t Laser Fiber: Chá»n KhÃ­ NitÆ¡ (N2) Hay Oxy (O2)?', category: 'Laser', author: 'Huy CNC', views: 285, status: 'published' },
-  { id: 3, title: 'Quy TrÃ¬nh Gia CÃ´ng Chi Tiáº¿t NhÃ´m CNC 5 Trá»¥c Tá»« Báº£n Váº½ CAD', category: 'CNC', author: 'Tráº§n Minh Ká»¹', views: 190, status: 'published' }
+  { id: 1, title: 'So Sánh Inox 304 và Inox 316 Trong Môi Trường Gió Biển Nha Trang', category: 'Vật Liệu', author: 'Kỹ Sư Trưởng', views: 420, status: 'published' },
+  { id: 2, title: 'Kỹ Thuật Cắt Laser Fiber: Chọn Khí Nitơ (N2) Hay Oxy (O2)?', category: 'Laser', author: 'Huy CNC', views: 285, status: 'published' },
+  { id: 3, title: 'Quy Trình Gia Công Chi Tiết Nhôm CNC 5 Trục Từ Bản Vẽ CAD', category: 'CNC', author: 'Trần Minh Kỹ', views: 190, status: 'published' }
 ];
 
 // Check login
@@ -459,13 +459,13 @@ function switchTab(tabId) {
   if (activeView) activeView.style.display = 'block';
 
   var titles = {
-    dashboard: 'Tá»•ng Quan Hoáº¡t Äá»™ng',
-    quotes: 'Quáº£n LÃ½ YÃªu Cáº§u BÃ¡o GiÃ¡',
-    products: 'Quáº£n LÃ½ Sáº£n Pháº©m Catalogue',
-    contacts: 'Quáº£n LÃ½ HÃ²m ThÆ° LiÃªn Há»‡',
-    blog: 'Quáº£n LÃ½ BÃ i Viáº¿t & Blog'
+    dashboard: 'Tổng Quan Hoạt Động',
+    quotes: 'Quản Lý Yêu Cầu Báo Giá',
+    products: 'Quản Lý Sản Phẩm Catalogue',
+    contacts: 'Quản Lý Hòm Thư Liên Hệ',
+    blog: 'Quản Lý Bài Viết & Blog'
   };
-  document.getElementById('page-section-title').textContent = titles[tabId] || 'Há»‡ Thá»‘ng Quáº£n Trá»‹';
+  document.getElementById('page-section-title').textContent = titles[tabId] || 'Hệ Thống Quản Trị';
   document.getElementById('top-btn-add-prod').style.display = (tabId === 'products') ? 'inline-flex' : 'none';
 }
 
@@ -478,7 +478,7 @@ function renderDashboard() {
   // Dash quotes
   var dQBody = document.getElementById('dash-quotes-tbody');
   dQBody.innerHTML = quotesData.map(function(q) {
-    var pill = q.status === 'new' ? '<span class="status-pill status-new">Má»›i gá»­i</span>' : '<span class="status-pill status-process">Äang xá»­ lÃ½</span>';
+    var pill = q.status === 'new' ? '<span class="status-pill status-new">Mới gửi</span>' : '<span class="status-pill status-process">Đang xử lý</span>';
     return '<tr>' +
       '<td style="font-family:var(--nt-font-mono);font-weight:700;color:var(--nt-teal)">' + q.quote_code + '</td>' +
       '<td><strong>' + q.customer_name + '</strong></td>' +
@@ -486,7 +486,7 @@ function renderDashboard() {
       '<td>' + q.material + ' (' + q.thickness + 'mm)</td>' +
       '<td>' + q.quantity + '</td>' +
       '<td>' + pill + '</td>' +
-      '<td><button type="button" class="tbl-btn" onclick="openQuoteDetail(' + q.id + ')" title="Xem chi tiáº¿t"><i class="fas fa-eye"></i></button></td>' +
+      '<td><button type="button" class="tbl-btn" onclick="openQuoteDetail(' + q.id + ')" title="Xem chi tiết"><i class="fas fa-eye"></i></button></td>' +
     '</tr>';
   }).join('');
 
@@ -498,7 +498,7 @@ function renderDashboard() {
       '<td>' + c.phone_email + '</td>' +
       '<td>' + c.subject + '</td>' +
       '<td style="max-width:240px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">' + c.message + '</td>' +
-      '<td><span class="status-pill status-new">ChÆ°a Ä‘á»c</span></td>' +
+      '<td><span class="status-pill status-new">Chưa đọc</span></td>' +
     '</tr>';
   }).join('');
 }
@@ -511,13 +511,13 @@ function renderAllQuotes() {
       '<td style="font-family:var(--nt-font-mono);font-weight:700;color:var(--nt-teal)">' + q.quote_code + '</td>' +
       '<td><strong>' + q.customer_name + '</strong></td>' +
       '<td><a href="tel:' + q.customer_phone + '" style="color:var(--nt-coral)">' + q.customer_phone + '</a></td>' +
-      '<td>' + q.material + ' Â· ' + q.dimensions + '</td>' +
+      '<td>' + q.material + ' · ' + q.dimensions + '</td>' +
       '<td>' + q.quantity + '</td>' +
       '<td><span class="badge" style="font-size:.65rem">CAD/2D</span></td>' +
       '<td><span class="status-pill status-' + (q.status === 'new' ? 'new' : 'process') + '">' + q.status + '</span></td>' +
       '<td>' +
         '<div class="tbl-actions">' +
-          '<button type="button" class="tbl-btn" onclick="openQuoteDetail(' + q.id + ')" title="Chi tiáº¿t"><i class="fas fa-eye"></i></button>' +
+          '<button type="button" class="tbl-btn" onclick="openQuoteDetail(' + q.id + ')" title="Chi tiết"><i class="fas fa-eye"></i></button>' +
           '<button type="button" class="tbl-btn" onclick="markQuoteDone(' + q.id + ')" title="Xong"><i class="fas fa-check"></i></button>' +
         '</div>' +
       '</td>' +
@@ -535,11 +535,11 @@ function renderAllProducts() {
       '<td><span class="badge">' + p.category.toUpperCase() + '</span></td>' +
       '<td>' + p.material + '</td>' +
       '<td style="color:var(--nt-teal);font-weight:600">' + p.precision_level + '</td>' +
-      '<td><span class="status-pill status-pub">Hiá»ƒn thá»‹</span></td>' +
+      '<td><span class="status-pill status-pub">Hiển thị</span></td>' +
       '<td>' +
         '<div class="tbl-actions">' +
-          '<button type="button" class="tbl-btn" onclick="editProduct(' + p.id + ')" title="Sá»­a"><i class="fas fa-edit"></i></button>' +
-          '<button type="button" class="tbl-btn danger" onclick="deleteProduct(' + p.id + ')" title="XÃ³a"><i class="fas fa-trash"></i></button>' +
+          '<button type="button" class="tbl-btn" onclick="editProduct(' + p.id + ')" title="Sửa"><i class="fas fa-edit"></i></button>' +
+          '<button type="button" class="tbl-btn danger" onclick="deleteProduct(' + p.id + ')" title="Xóa"><i class="fas fa-trash"></i></button>' +
         '</div>' +
       '</td>' +
     '</tr>';
@@ -556,11 +556,11 @@ function renderAllContacts() {
       '<td>' + c.phone_email + '</td>' +
       '<td>' + c.subject + '</td>' +
       '<td>' + c.message + '</td>' +
-      '<td><span class="status-pill ' + (c.status === 'unread' ? 'status-new' : 'status-done') + '">' + (c.status === 'unread' ? 'ChÆ°a Ä‘á»c' : 'ÄÃ£ Ä‘á»c') + '</span></td>' +
+      '<td><span class="status-pill ' + (c.status === 'unread' ? 'status-new' : 'status-done') + '">' + (c.status === 'unread' ? 'Chưa đọc' : 'Đã đọc') + '</span></td>' +
       '<td>' +
         '<div class="tbl-actions">' +
-          '<a href="tel:' + c.phone_email + '" class="tbl-btn" title="Gá»i"><i class="fas fa-phone"></i></a>' +
-          '<button type="button" class="tbl-btn danger" onclick="deleteContact(' + c.id + ')" title="XÃ³a"><i class="fas fa-trash"></i></button>' +
+          '<a href="tel:' + c.phone_email + '" class="tbl-btn" title="Gọi"><i class="fas fa-phone"></i></a>' +
+          '<button type="button" class="tbl-btn danger" onclick="deleteContact(' + c.id + ')" title="Xóa"><i class="fas fa-trash"></i></button>' +
         '</div>' +
       '</td>' +
     '</tr>';
@@ -576,10 +576,10 @@ function renderAllBlog() {
       '<td><span class="badge">' + b.category + '</span></td>' +
       '<td>' + b.author + '</td>' +
       '<td style="color:var(--nt-teal)">' + b.views + '</td>' +
-      '<td><span class="status-pill status-pub">ÄÃ£ xuáº¥t báº£n</span></td>' +
+      '<td><span class="status-pill status-pub">Đã xuất bản</span></td>' +
       '<td>' +
         '<div class="tbl-actions">' +
-          '<button type="button" class="tbl-btn" title="Chá»‰nh sá»­a"><i class="fas fa-edit"></i></button>' +
+          '<button type="button" class="tbl-btn" title="Chỉnh sửa"><i class="fas fa-edit"></i></button>' +
         '</div>' +
       '</td>' +
     '</tr>';
@@ -591,16 +591,16 @@ function openQuoteDetail(id) {
   var q = quotesData.find(function(item) { return item.id === id; });
   if (!q) return;
   var html = '<div style="display:grid;grid-template-columns:140px 1fr;gap:.75rem;font-size:.9rem">' +
-    '<strong>MÃ£ yÃªu cáº§u:</strong><span style="color:var(--nt-teal);font-weight:700">' + q.quote_code + '</span>' +
-    '<strong>KhÃ¡ch hÃ ng:</strong><span>' + q.customer_name + '</span>' +
-    '<strong>Äiá»‡n thoáº¡i:</strong><span><a href="tel:' + q.customer_phone + '" style="color:var(--nt-coral);font-weight:700">' + q.customer_phone + '</a></span>' +
-    '<strong>Váº­t liá»‡u &amp; DÃ y:</strong><span>' + q.material + ' (DÃ y: ' + q.thickness + 'mm)</span>' +
-    '<strong>KÃ­ch thÆ°á»›c:</strong><span>' + q.dimensions + ' (SL: ' + q.quantity + ')</span>' +
-    '<strong>Ghi chÃº ká»¹ thuáº­t:</strong><span>' + q.note + '</span>' +
-    '<strong>Thá»i gian gá»­i:</strong><span>' + q.created_at + '</span>' +
+    '<strong>Mã yêu cầu:</strong><span style="color:var(--nt-teal);font-weight:700">' + q.quote_code + '</span>' +
+    '<strong>Khách hàng:</strong><span>' + q.customer_name + '</span>' +
+    '<strong>Điện thoại:</strong><span><a href="tel:' + q.customer_phone + '" style="color:var(--nt-coral);font-weight:700">' + q.customer_phone + '</a></span>' +
+    '<strong>Vật liệu &amp; Dày:</strong><span>' + q.material + ' (Dày: ' + q.thickness + 'mm)</span>' +
+    '<strong>Kích thước:</strong><span>' + q.dimensions + ' (SL: ' + q.quantity + ')</span>' +
+    '<strong>Ghi chú kỹ thuật:</strong><span>' + q.note + '</span>' +
+    '<strong>Thời gian gửi:</strong><span>' + q.created_at + '</span>' +
   '</div>' +
   '<div style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--nt-bdr-subtle);display:flex;gap:.75rem">' +
-    '<a href="tel:' + q.customer_phone + '" class="btn btn-primary btn-sm"><i class="fas fa-phone-alt"></i> Gá»i Äiá»‡n Ngay</a>' +
+    '<a href="tel:' + q.customer_phone + '" class="btn btn-primary btn-sm"><i class="fas fa-phone-alt"></i> Gọi Điện Ngay</a>' +
     '<a href="https://zalo.me/' + q.customer_phone + '" target="_blank" class="btn btn-secondary btn-sm"><i class="fab fa-comment-dots"></i> Chat Zalo</a>' +
   '</div>';
   document.getElementById('modal-quote-content').innerHTML = html;
@@ -612,13 +612,13 @@ function markQuoteDone(id) {
   if (q) {
     q.status = 'done';
     renderAllQuotes();
-    alert('ÄÃ£ cáº­p nháº­t tráº¡ng thÃ¡i hoÃ n táº¥t cho Ä‘Æ¡n ' + q.quote_code);
+    alert('Đã cập nhật trạng thái hoàn tất cho đơn ' + q.quote_code);
   }
 }
 
 // Product Modal & Handlers
 document.getElementById('btn-open-add-product').addEventListener('click', function() {
-  document.getElementById('modal-prod-title').textContent = 'ThÃªm Sáº£n Pháº©m Má»›i';
+  document.getElementById('modal-prod-title').textContent = 'Thêm Sản Phẩm Mới';
   document.getElementById('form-product').reset();
   document.getElementById('prod-id').value = '';
   document.getElementById('modal-product').classList.add('open');
@@ -634,7 +634,7 @@ function closeProdModal() {
 function editProduct(id) {
   var p = productsData.find(function(item) { return item.id === id; });
   if (!p) return;
-  document.getElementById('modal-prod-title').textContent = 'Chá»‰nh Sá»­a Sáº£n Pháº©m';
+  document.getElementById('modal-prod-title').textContent = 'Chỉnh Sửa Sản Phẩm';
   document.getElementById('prod-id').value = p.id;
   document.getElementById('form-prod-name').value = p.name;
   document.getElementById('form-prod-cat').value = p.category;
@@ -646,14 +646,14 @@ function editProduct(id) {
 }
 
 function deleteProduct(id) {
-  if (confirm('Báº¡n cÃ³ cháº¯c cháº¯n muá»‘n xÃ³a sáº£n pháº©m nÃ y khá»i catalogue?')) {
+  if (confirm('Bạn có chắc chắn muốn xóa sản phẩm này khỏi catalogue?')) {
     productsData = productsData.filter(function(p) { return p.id !== id; });
     renderAllProducts();
   }
 }
 
 function deleteContact(id) {
-  if (confirm('XÃ³a tin nháº¯n nÃ y?')) {
+  if (confirm('Xóa tin nhắn này?')) {
     contactsData = contactsData.filter(function(c) { return c.id !== id; });
     renderAllContacts();
   }
@@ -666,7 +666,7 @@ function handleSaveProduct(e) {
   var cat = document.getElementById('form-prod-cat').value;
   var price = parseFloat(document.getElementById('form-prod-price').value) || 0;
   var mat = document.getElementById('form-prod-material').value.trim();
-  var prec = document.getElementById('form-prod-precision').value.trim() || 'Â±0.01mm';
+  var prec = document.getElementById('form-prod-precision').value.trim() || '±0.01mm';
   var img = document.getElementById('form-prod-img').value.trim() || 'uploads/products/catalogue-sp01-card.webp';
 
   if (id) {
@@ -689,7 +689,7 @@ function handleSaveProduct(e) {
   }
   closeProdModal();
   renderAllProducts();
-  alert('ÄÃ£ lÆ°u thÃ´ng tin sáº£n pháº©m thÃ nh cÃ´ng!');
+  alert('Đã lưu thông tin sản phẩm thành công!');
 }
 
 // Mobile sidebar toggle
@@ -699,7 +699,7 @@ document.getElementById('admin-menu-toggle').addEventListener('click', function(
 
 // Logout with Server Session Invalidation
 document.getElementById('btn-logout').addEventListener('click', function() {
-  if (confirm('Báº¡n muá»‘n Ä‘Äƒng xuáº¥t khá»i trang quáº£n trá»‹?')) {
+  if (confirm('Bạn muốn đăng xuất khỏi trang quản trị?')) {
     fetch('backend/api/auth.php', {
       method: 'DELETE',
       headers: {
@@ -724,5 +724,3 @@ renderAllBlog();
 </script>
 </body>
 </html>
-
-
